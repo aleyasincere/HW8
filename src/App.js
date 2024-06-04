@@ -1,14 +1,20 @@
-import './App.css'
-import PostPage from "./pages/PostPage/PostPage";
+import Main from './components/Main/Main'
+import About from './components/About/About'
+import ModalProvider from '/Context/ModalProvider'
+import Ref from './pages/Ref/Ref'
 
-function App() {
-
-    return (
-        <div className="App">
-            <PostPage/>
-        </div>
-    )
-
+const App = () => {
+  
+  return (
+    <div>
+      <ModalProvider>
+        <About/>
+        
+      <Main/>
+      </ModalProvider>
+      <Ref/>
+    </div>
+  )
 }
 
-export default App;
+export default App
